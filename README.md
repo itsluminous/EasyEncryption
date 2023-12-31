@@ -2,7 +2,7 @@
 Useful if you want to share some data with someone (eg. over mail) with strong encryption, and you don't trust the online companies doing encryption for you
 
 # Setup
-- Ensure that you have python 3 installed.
+- Ensure that you have python 3 installed. Refer guide [here](https://realpython.com/installing-python/)
 - Install the required dependencies
 ```
 pip install -r requirements.txt
