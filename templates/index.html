@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Encrypt/Decrypt your text</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Encrypt/Decrypt your text</h1>
+        <div class="tabs">
+            <button onclick="openTab(event, 'generateKey')" class=" active">Generate Key</button>
+            <button onclick="openTab(event, 'encryptText')">Encrypt Text</button>
+            <button onclick="openTab(event, 'decryptText')">Decrypt Text</button>
+        </div>
+
+        <div id="generateKey" class="tab-content active">
+            <h2>Generate Encryption Key</h2>
+            <button onclick="generateKey()">Generate Key</button>
+            <input type="text" id="generatedKey" placeholder="Generated Key" readonly>
+        </div>
+
+        <div id="encryptText" class="tab-content">
+            <h2>Encrypt Text</h2>
+            <input type="text" id="encryptionKey" placeholder="Enter Encryption Key">
+            <textarea id="encryptionInput" rows="8" placeholder="Enter text to encrypt"></textarea>
+            <button onclick="encryptText()">Encrypt</button>
+            <textarea id="encryptedOutput" rows="8" placeholder="Encrypted Text" readonly></textarea>
+        </div>
+
+        <div id="decryptText" class="tab-content">
+            <h2>Decrypt Text</h2>
+            <input type="text" id="decryptionKey" placeholder="Enter Decryption Key">
+            <textarea id="decryptionInput" rows="8" placeholder="Enter text to decrypt"></textarea>
+            <button onclick="decryptText()">Decrypt</button>
+            <textarea id="decryptedOutput" rows="8" placeholder="Decrypted Text" readonly></textarea>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>
