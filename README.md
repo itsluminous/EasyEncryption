@@ -14,8 +14,17 @@ pip install -r requirements.txt
 python script.py
 ```
 
+# Lint
+```
+pylint $(git ls-files '*.py')  
+```
+
 # Test
 ```
+python -m unittest discover -s .
+
+OR
+
 python test_core.py
 python test_script.py
 ```
