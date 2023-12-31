@@ -22,6 +22,11 @@ python script.py
 ```
 python app.py
 ```
+- If you want to run on docker, then run below commands and then access app at http://localhost:5000/
+```
+docker build -t easyencryption .
+docker run -d --name easyencryption -p 5000:5000 easyencryption
+```
 
 # Lint
 ```
