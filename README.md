@@ -18,6 +18,10 @@ pip install -r requirements.txt
 ```
 python script.py
 ```
+- If you instead want to use UI, then run this and then access app at http://localhost:5000/
+```
+python app.py
+```
 
 # Lint
 ```
@@ -33,6 +37,14 @@ OR
 python test_core.py
 python test_script.py
 ```
+
+# Generate documentation for all files
+```
+pydoc -w $(git ls-files '*.py' | sed 's/\.py$//')  
+```
+
+# UI screenshot
+![Decrypt](screenshots/decrypt.png)
 
 # Sample Journey
 ```
