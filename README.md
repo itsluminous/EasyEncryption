@@ -3,6 +3,11 @@ Useful if you want to share some data with someone (eg. over mail) with strong e
 
 # Setup
 - Ensure that you have python 3 installed. Refer guide [here](https://realpython.com/installing-python/)
+- Clone this repo
+```
+git clone https://github.com/itsluminous/EasyEncryption.git
+```
+- Open your terminal/command prompt/powersheel and cd to the `EasyEncryption` directory
 - Install the required dependencies
 ```
 pip install -r requirements.txt
