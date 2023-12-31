@@ -14,6 +14,12 @@ pip install -r requirements.txt
 python script.py
 ```
 
+# Test
+```
+python test_core.py
+python test_script.py
+```
+
 # Sample Journey
 ```
 $ python script.py
