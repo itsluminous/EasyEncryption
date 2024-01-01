@@ -1,98 +1,103 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
 .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
 }
 
 .title {
     text-align: center;
     margin-bottom: 30px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #666;
 }
 
 .tabs {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures borders are visible */
 }
 
 .tabs button {
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 12px 20px;
+    margin: 0;
+    padding: 10px 20px;
+    color: #555;
+    text-decoration: none;
+    transition: all 0.3s ease;
     font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 4px 4px 0 0;
-    transition: background-color 0.3s ease;
-}
-
-.tabs button:not(:last-child) {
-    margin-right: 5px;
+    font-weight: bold;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    outline: none;
 }
 
 .tabs button:hover {
-    background-color: #0056b3;
+    background-color: #f0f0f0;
+    color: #007bff;
 }
 
 .tabs button.active {
-    background-color: #0056b3;
+    background-color: #007bff;
+    color: #fff;
 }
 
 .tab-content {
     display: none;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 2px solid #ddd;
+    border: 1px solid #ccc;
     border-top: none;
-    border-radius: 0 0 8px 8px;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .tab-content.active {
     display: block;
 }
 
-input[type="text"],
-textarea {
-    width: calc(100%);
-    padding: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: none;
-    font-size: 14px;
-}
-
-button {
-    width: 100%;
-    padding: 10px 0;
-    margin-top: 10px;
-    border: none;
-    outline: none;
-    cursor: pointer;
+.btn-primary {
     background-color: #007bff;
-    color: #fff;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    border-color: #007bff;
 }
 
-button:hover {
+.btn-primary:hover {
     background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+textarea,
+input[type="text"] {
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+@media (max-height: 600px) {
+    textarea,
+    input[type="text"] {
+        padding: 6px;
+        font-size: 14px;
+    }
 }

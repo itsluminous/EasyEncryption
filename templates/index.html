@@ -5,37 +5,47 @@
     <meta charset="UTF-8">
     <title>Encrypt/Decrypt your text</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
         <h1 class="title">Encrypt/Decrypt your text</h1>
-        <div class="tabs">
-            <button onclick="openTab(event, 'generateKey')" class=" active">Generate Key</button>
-            <button onclick="openTab(event, 'encryptText')">Encrypt Text</button>
-            <button onclick="openTab(event, 'decryptText')">Decrypt Text</button>
+        <h6 class="subtitle">This application uses <a href="https://cryptography.io/en/latest/fernet/" target="_blank" style="color: #007bff; text-decoration: none;">Fernet key</a> for encryption and decryption which ensures that data cannot be manipulated or read without the key</h6>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="tabs">
+                    <button onclick="openTab(event, 'generateKey')" class=" active">Generate Key</button>
+                    <button onclick="openTab(event, 'encryptText')">Encrypt Text</button>
+                    <button onclick="openTab(event, 'decryptText')">Decrypt Text</button>
+                </div>
+            </div>
         </div>
 
-        <div id="generateKey" class="tab-content active">
-            <h2>Generate Encryption Key</h2>
-            <button onclick="generateKey()">Generate Key</button>
-            <input type="text" id="generatedKey" placeholder="Generated Key" readonly>
-        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="generateKey" class="tab-content active">
+                    <h2>Generate A New Encryption Key</h2>
+                    <button onclick="generateKey()" class="btn btn-primary">Generate Key</button>
+                    <input type="text" id="generatedKey" class="form-control mt-3" placeholder="Generated Key" readonly>
+                </div>
 
-        <div id="encryptText" class="tab-content">
-            <h2>Encrypt Text</h2>
-            <input type="text" id="encryptionKey" placeholder="Enter Encryption Key">
-            <textarea id="encryptionInput" rows="8" placeholder="Enter text to encrypt"></textarea>
-            <button onclick="encryptText()">Encrypt</button>
-            <textarea id="encryptedOutput" rows="8" placeholder="Encrypted Text" readonly></textarea>
-        </div>
+                <div id="encryptText" class="tab-content">
+                    <h2>Encrypt Text</h2>
+                    <input type="text" id="encryptionKey" class="form-control" placeholder="Enter Encryption Key">
+                    <textarea id="encryptionInput" class="form-control mt-3" rows="8" placeholder="Enter text to encrypt"></textarea>
+                    <button onclick="encryptText()" class="btn btn-primary mt-3">Encrypt</button>
+                    <textarea id="encryptedOutput" class="form-control mt-3" rows="8" placeholder="Encrypted Text" readonly></textarea>
+                </div>
 
-        <div id="decryptText" class="tab-content">
-            <h2>Decrypt Text</h2>
-            <input type="text" id="decryptionKey" placeholder="Enter Decryption Key">
-            <textarea id="decryptionInput" rows="8" placeholder="Enter text to decrypt"></textarea>
-            <button onclick="decryptText()">Decrypt</button>
-            <textarea id="decryptedOutput" rows="8" placeholder="Decrypted Text" readonly></textarea>
+                <div id="decryptText" class="tab-content">
+                    <h2>Decrypt Text</h2>
+                    <input type="text" id="decryptionKey" class="form-control" placeholder="Enter Decryption Key">
+                    <textarea id="decryptionInput" class="form-control mt-3" rows="8" placeholder="Enter text to decrypt"></textarea>
+                    <button onclick="decryptText()" class="btn btn-primary mt-3">Decrypt</button>
+                    <textarea id="decryptedOutput" class="form-control mt-3" rows="8" placeholder="Decrypted Text" readonly></textarea>
+                </div>
+            </div>
         </div>
     </div>
 
