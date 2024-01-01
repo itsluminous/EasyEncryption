@@ -3,8 +3,8 @@ Flask app for key generation, encryption, and decryption.
 """
 
 from flask import Flask, render_template, request, jsonify
-from core import generate_key, encrypt_message, decrypt_message
 from cryptography.fernet import InvalidToken
+from core import generate_key, encrypt_message, decrypt_message
 
 app = Flask(__name__)
 
@@ -54,7 +54,7 @@ def decrypt():
     except ValueError as error:
         return jsonify({'error': str(error)}), 500
     except InvalidToken as error:
-        return jsonify('error : Invalid encoded string'), 500
+        return jsonify({'error': f'Invalid encoded string {str(error)}'}), 500
 
 
 if __name__ == '__main__':

@@ -4,7 +4,8 @@
 
 Useful if you want to share some data with someone (eg. over mail) with strong encryption, and you don't trust the online companies doing encryption for you
 
-Try out the tool at : https://easyencryption.onrender.com/
+Try out the tool at : https://easyencryption.onrender.com/  
+**Note** that first launch might take a minute, subsequent runs will be instant.
 
 # Local Setup
 ### Using docker
