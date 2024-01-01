@@ -7,6 +7,11 @@ Useful if you want to share some data with someone (eg. over mail) with strong e
 Try out the tool at : https://easyencryption.onrender.com/  
 **Note** that first launch might take a minute, subsequent runs will be instant.
 
+# Features
+- This application uses [Fernet key](https://cryptography.io/en/latest/fernet/) for encryption and decryption which ensures that data cannot be manipulated or read without the key.
+- The tech stack is Python (with flask for web application)
+- This repo has proper test coverage, CI/CD pipelines and docker packages published to container registry.
+
 # Local Setup
 ### Using docker
 - Ensure that you have [docker](https://docs.docker.com/get-docker/) installed and running.
@@ -16,8 +21,13 @@ docker run -d --name easyencryption -p 5000:5000 ghcr.io/itsluminous/easyencrypt
 ```
 - Now access the application at http://localhost:5000/
 
-### Using docker but building image in local
+### Build docker image in local and run
 - Ensure that you have [docker](https://docs.docker.com/get-docker/) installed and running.
+- Clone this repo
+```
+git clone https://github.com/itsluminous/EasyEncryption.git
+```
+- Open your terminal/command prompt/powershel and cd to the `EasyEncryption` directory
 - Run below command to build the docker image
 ```
 docker build -t easyencryption .
@@ -28,13 +38,13 @@ docker run -d --name easyencryption -p 5000:5000 easyencryption
 ```
 - Now access the application at http://localhost:5000/
 
-### Using CLI or UI
+### Running directly in local, without docker
 - Ensure that you have python 3 installed. Refer guide [here](https://realpython.com/installing-python/)
 - Clone this repo
 ```
 git clone https://github.com/itsluminous/EasyEncryption.git
 ```
-- Open your terminal/command prompt/powersheel and cd to the `EasyEncryption` directory
+- Open your terminal/command prompt/powershel and cd to the `EasyEncryption` directory
 - Install the required dependencies using ``pip install -r requirements.txt``
 - For UI, run ``python app.py`` and for CLI run ``python script.py``
 
