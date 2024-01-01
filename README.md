@@ -4,31 +4,23 @@ Useful if you want to share some data with someone (eg. over mail) with strong e
 Try out the tool at : https://easyencryption.onrender.com/
 
 # Setup
+### Using docker
+- Ensure that you have [docker](https://docs.docker.com/get-docker/) installed and running.
+- Run below command to start the app in docker
+```
+docker run -d --name easyencryption -p 5000:5000 ghcr.io/itsluminous/easyencryption:latest
+```
+- Now access the application at http://localhost:5000/
+
+### Using CLI or UI
 - Ensure that you have python 3 installed. Refer guide [here](https://realpython.com/installing-python/)
 - Clone this repo
 ```
 git clone https://github.com/itsluminous/EasyEncryption.git
 ```
 - Open your terminal/command prompt/powersheel and cd to the `EasyEncryption` directory
-- Install the required dependencies
-```
-pip install -r requirements.txt
-```
-
-# Usage
-- Assuming you have python properly setup and dependencies installed, run following command and follow the prompt
-```
-python script.py
-```
-- If you instead want to use UI, then run this and then access app at http://localhost:5000/
-```
-python app.py
-```
-- If you want to run on docker, then run below commands and then access app at http://localhost:5000/
-```
-docker build -t easyencryption .
-docker run -d --name easyencryption -p 5000:5000 easyencryption
-```
+- Install the required dependencies using ``pip install -r requirements.txt``
+- For UI, run ``python app.py`` and for CLI run ``python script.py``
 
 # Lint
 ```
@@ -53,7 +45,7 @@ pydoc -w $(git ls-files '*.py' | sed 's/\.py$//')
 # UI screenshot
 ![Decrypt](screenshots/decrypt.png)
 
-# Sample Journey
+# Sample Journey in CLI
 ```
 $ python script.py
 
