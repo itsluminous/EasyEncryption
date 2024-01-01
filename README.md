@@ -1,9 +1,12 @@
 # EasyEncryption
+[![Lint and Test](https://github.com/itsluminous/EasyEncryption/actions/workflows/main.yml/badge.svg)](https://github.com/itsluminous/EasyEncryption/actions/workflows/main.yml)
+[![Publish](https://github.com/itsluminous/EasyEncryption/actions/workflows/release.yml/badge.svg)](https://github.com/itsluminous/EasyEncryption/actions/workflows/release.yml)
+
 Useful if you want to share some data with someone (eg. over mail) with strong encryption, and you don't trust the online companies doing encryption for you
 
 Try out the tool at : https://easyencryption.onrender.com/
 
-# Setup
+# Local Setup
 ### Using docker
 - Ensure that you have [docker](https://docs.docker.com/get-docker/) installed and running.
 - Run below command to start the app in docker
@@ -22,12 +25,12 @@ git clone https://github.com/itsluminous/EasyEncryption.git
 - Install the required dependencies using ``pip install -r requirements.txt``
 - For UI, run ``python app.py`` and for CLI run ``python script.py``
 
-# Lint
+# Run lint and test
+### Lint
 ```
 pylint $(git ls-files '*.py')  
 ```
-
-# Test
+#### Test
 ```
 python -m unittest discover -s .
 
