@@ -1,5 +1,6 @@
 # EasyEncryption
 [![Lint and Test](https://github.com/itsluminous/EasyEncryption/actions/workflows/main.yml/badge.svg)](https://github.com/itsluminous/EasyEncryption/actions/workflows/main.yml)
+[![CodeQL](https://github.com/itsluminous/EasyEncryption/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/itsluminous/EasyEncryption/actions/workflows/github-code-scanning/codeql)
 [![Publish](https://github.com/itsluminous/EasyEncryption/actions/workflows/release.yml/badge.svg)](https://github.com/itsluminous/EasyEncryption/actions/workflows/release.yml)
 
 Useful if you want to share some data with someone (eg. over mail) with strong encryption, and you don't trust the online companies doing encryption for you
