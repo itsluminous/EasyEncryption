@@ -46,3 +46,14 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-and-push-image
+    env:
+      RENDER_SERVER: ${{ secrets.RENDER_SERVER }}
+      RENDER_KEY: ${{ secrets.RENDER_KEY }}
+    steps:
+      - name: Call Render API to deploy latest image
+        run: |
+          curl -X POST "https://api.render.com/deploy/${RENDER_SERVER}?key=${RENDER_KEY}"
