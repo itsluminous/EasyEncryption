@@ -16,6 +16,18 @@ docker run -d --name easyencryption -p 5000:5000 ghcr.io/itsluminous/easyencrypt
 ```
 - Now access the application at http://localhost:5000/
 
+### Using docker but building image in local
+- Ensure that you have [docker](https://docs.docker.com/get-docker/) installed and running.
+- Run below command to build the docker image
+```
+docker build -t easyencryption .
+```
+- Run below command to start the app in docker
+```
+docker run -d --name easyencryption -p 5000:5000 easyencryption
+```
+- Now access the application at http://localhost:5000/
+
 ### Using CLI or UI
 - Ensure that you have python 3 installed. Refer guide [here](https://realpython.com/installing-python/)
 - Clone this repo
@@ -31,14 +43,9 @@ git clone https://github.com/itsluminous/EasyEncryption.git
 ```
 pylint $(git ls-files '*.py')  
 ```
-#### Test
+### Test
 ```
 python -m unittest discover -s .
-
-OR
-
-python test_core.py
-python test_script.py
 ```
 
 # Generate documentation for all files
