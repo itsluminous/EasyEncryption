@@ -54,3 +54,20 @@ function decryptText() {
         .then(response => response.text())
         .then(decryptedText => document.getElementById("decryptedOutput").value = decryptedText);
 }
+
+function copyText(elementId) {
+    const element = document.getElementById(elementId);
+    const text = element.value || element.textContent;
+
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 1300);
+        })
+        .catch((err) => {
+            console.error('Unable to copy to clipboard:', err);
+        });
+}
