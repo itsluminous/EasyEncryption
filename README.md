@@ -7,8 +7,10 @@ Useful if you want to share some data with someone (eg. over mail) with strong e
 Try out the tool at : https://easyencryption.onrender.com/  
 **Note** that first launch might take a minute, subsequent runs will be instant.
 
+![Screenshot Here](images/screengrab.gif)
+
 # Features
-- This application uses [Fernet key](https://cryptography.io/en/latest/fernet/) for encryption and decryption which ensures that data cannot be manipulated or read without the key.
+- This application uses [Fernet encryption](https://cryptography.io/en/latest/fernet/) for securing data which ensures that it cannot be manipulated or read without the key.
 - The tech stack is Python (with flask for web application)
 - This repo has proper test coverage, CI/CD pipelines and docker packages published to container registry.
 
@@ -55,16 +57,13 @@ pylint $(git ls-files '*.py')
 ```
 ### Test
 ```
-python -m unittest discover -s .
+python -m unittest discover -s tests
 ```
 
 # Generate documentation for all files
 ```
 pydoc -w $(git ls-files '*.py' | sed 's/\.py$//')  
 ```
-
-# UI screenshot
-![Decrypt](screenshots/decrypt.png)
 
 # Sample Journey in CLI
 ```
