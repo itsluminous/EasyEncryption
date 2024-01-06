@@ -24,15 +24,15 @@ function encryptText() {
     var key = document.getElementById("encryptionKey").value;
 
     fetch('/encrypt', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            'text': text,
-            'key': key
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                'text': text,
+                'key': key
+            })
         })
-    })
         .then(response => response.text())
         .then(encryptedText => document.getElementById("encryptedOutput").value = encryptedText);
 }
@@ -42,15 +42,15 @@ function decryptText() {
     var key = document.getElementById("decryptionKey").value;
 
     fetch('/decrypt', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            'text': text,
-            'key': key
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                'text': text,
+                'key': key
+            })
         })
-    })
         .then(response => response.text())
         .then(decryptedText => document.getElementById("decryptedOutput").value = decryptedText);
 }
