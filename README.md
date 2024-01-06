@@ -30,7 +30,7 @@ docker run -d --name easyencryption -p 5000:5000 ghcr.io/itsluminous/easyencrypt
 ```
 git clone https://github.com/itsluminous/EasyEncryption.git
 ```
-- Open your terminal/command prompt/powershel and cd to the `EasyEncryption` directory
+- Open your terminal/command prompt/powershell and cd to the `EasyEncryption` directory
 - Run below command to build the docker image
 ```
 docker build -t easyencryption .
