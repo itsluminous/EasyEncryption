@@ -16,7 +16,7 @@ Try out the tool at : https://easyencryption.onrender.com/
 - This repo has proper test coverage, CI/CD pipelines and docker packages published to container registry.
 
 # Local Setup
-### Using docker
+### Option 1 : Using docker
 - Ensure that you have [docker](https://docs.docker.com/get-docker/) installed and running.
 - Run below command to start the app in docker
 ```
@@ -24,7 +24,7 @@ docker run -d --name easyencryption -p 5000:5000 ghcr.io/itsluminous/easyencrypt
 ```
 - Now access the application at http://localhost:5000/
 
-### Build docker image in local and run
+### Option 2 : Build docker image in local and run
 - Ensure that you have [docker](https://docs.docker.com/get-docker/) installed and running.
 - Clone this repo
 ```
@@ -41,7 +41,7 @@ docker run -d --name easyencryption -p 5000:5000 easyencryption
 ```
 - Now access the application at http://localhost:5000/
 
-### Running directly in local, without docker
+### Option 3 : Running directly in local, without docker
 - Ensure that you have python 3 installed. Refer guide [here](https://realpython.com/installing-python/)
 - Clone this repo
 ```
