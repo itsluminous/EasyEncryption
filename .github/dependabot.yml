@@ -1,0 +1,17 @@
+# Documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+    ignore:
+      - dependency-name: "cryptography"
+        versions: ["<3.4.7"]
+      - dependency-name: "pylint"
+        versions: ["<2.11.1"]
+      - dependency-name: "Flask"
+        versions: ["<3.0"]
